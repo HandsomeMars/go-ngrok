@@ -1,5 +1,5 @@
 # go-ngrok
-基于go1.17和ngrok1.7打包的镜像进行交叉编译
+基于go1.16.10和ngrok1.7打包的镜像进行交叉编译
 
 # 依赖
 需要docker环境
@@ -8,6 +8,7 @@
 bin/     编译的客户端和服务端目录
 ca/      证书挂载目录
 build.sh 交叉编译脚本
+script.sh 交叉编译例子
 
 # 例子
 build.sh

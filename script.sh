@@ -1,5 +1,5 @@
 # $1 自定义域名 $2 是否使用自己的ca（0是 1不是）
-docker run --rm  -v "$PWD"/ca:/ngrok/ca -v "$PWD"/bin:/ngrok/bin --env NGROK_DOMAIN=$1 --env USE_CUSTMER_CA=$2 go-ngrok:latest sh -c  \
+docker run --rm  -v "$PWD"/ca:/ngrok/ca -v "$PWD"/bin:/ngrok/bin --env NGROK_DOMAIN=$1 --env USE_CUSTMER_CA=$2 marsbug/go-ngrok-alpine:latest sh -c  \
 'echo "--------------------- 公网 NGROK_DOMAIN : $NGROK_DOMAIN  ---------------------" \
 && if [ $USE_CUSTMER_CA == 1 ];then \
 echo "--------------------- 使用自己证书 ... 生成中 ---------------------" \
