@@ -10,11 +10,12 @@ ca/      证书挂载目录
 build.sh 交叉编译脚本
 
 # 例子
+build.sh
 ## 没有证书
 ```bash
 # USE_CUSTMER_CA = 0
 # NGROK_DOMAIN = 签发证书的域名
- ./build.sh NGROK_DOMAIN USE_CUSTMER_CA
+ ./script.sh NGROK_DOMAIN USE_CUSTMER_CA
 ```
 ## 有自己证书
 ```bash
@@ -23,7 +24,7 @@ cp yourrootCA.key ca/rootCA.key
 cp yourrootCA.pem ca/rootCA.pem
 cp yourdevice.crt ca/device.crt
 # NGROK_DOMAIN = 签发证书的域名
- ./build.sh NGROK_DOMAIN USE_CUSTMER_CA
+ ./script.sh NGROK_DOMAIN USE_CUSTMER_CA
 ```
 ## 注意
 *每次主域名修改需要修改证书*
